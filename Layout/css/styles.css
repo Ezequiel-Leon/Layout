@@ -1,0 +1,35 @@
+.grid-container{
+	background-color: black;
+	display: grid;
+	grid-template-columns: 150px auto 150px;
+	grid-template-rows: respeat(3, 100px);
+	gap: 10px;
+	padding: 10px;
+}
+.grid-container > *{
+	background-color: rgb(17, 142, 226);
+	border: 1px solid white;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header, footer{
+	grid-column: 1/ span 3;
+}
+@media all and (max-width: 600px){
+	aside, article{
+		grid-column: 1 / span 3;
+	}
+}
+.grid-container{
+	grid-template-rows: repeat(5, 100px);
+}
+.footer-custom-color{
+	background-color: rgb(16, 34, 197);
+
+}
+*{
+	font-family:'Bauhaus 93';
+	font-size: 20px;
+}
